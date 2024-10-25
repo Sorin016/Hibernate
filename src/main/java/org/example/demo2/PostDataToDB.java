@@ -1,5 +1,6 @@
 package org.example.demo2;
 
+import ConnectionToDB.ConnTODb;
 import entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -7,17 +8,10 @@ import org.hibernate.cfg.Configuration;
 
 import java.io.Serializable;
 
-public class Test implements Serializable {
+public class PostDataToDB extends ConnTODb implements Serializable  {
     public static void main(String[] args) {
-        SessionFactory sessionFactory=new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(User.class)
-                .buildSessionFactory();
-
-        Session session=sessionFactory.openSession();
-
         try{
-            User user=new User("DAVID","LAZAR",54321);
+            User user=new User("Maia","Popkina",78996);
             session.beginTransaction();
             session.save(user);
             session.getTransaction().commit();
