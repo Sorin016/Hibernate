@@ -1,12 +1,11 @@
 package org.example.demo2;
 
-import ConnectionToDB.ConnTODb;
-import org.hibernate.Transaction;
+import ConnectionToDB.HibernateConnTODb;
 import org.hibernate.query.Query;
 
 import java.io.Serializable;
 
-public class CreateSQLQueryInsert extends ConnTODb implements Serializable {
+public class CreateSQLQueryInsert extends HibernateConnTODb implements Serializable {
     public static void main(String[] args) {
         try{
             session.beginTransaction();

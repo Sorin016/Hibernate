@@ -1,12 +1,11 @@
 package org.example.demo2;
 
-import ConnectionToDB.ConnTODb;
+import ConnectionToDB.HibernateConnTODb;
 import entity.User;
 
 import java.io.Serializable;
-import java.util.stream.Stream;
 
-public class GetDataFromDB extends ConnTODb implements Serializable {
+public class GetDataFromDBHibernate extends HibernateConnTODb implements Serializable {
     public static void main(String[] args) {
 
         try {

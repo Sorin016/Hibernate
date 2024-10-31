@@ -1,14 +1,10 @@
 package org.example.demo2;
 
-import ConnectionToDB.ConnTODb;
-import entity.User;
-import org.hibernate.query.Query;
+import ConnectionToDB.HibernateConnTODb;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.stream.Stream;
 
-public class UpdateForDB extends ConnTODb implements Serializable {
+public class UpdateForDBHibernate extends HibernateConnTODb implements Serializable {
     public static void main(String[] args) {
         try {
             session.beginTransaction();

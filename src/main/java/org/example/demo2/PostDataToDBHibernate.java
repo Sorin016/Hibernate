@@ -1,14 +1,11 @@
 package org.example.demo2;
 
-import ConnectionToDB.ConnTODb;
+import ConnectionToDB.HibernateConnTODb;
 import entity.User;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 import java.io.Serializable;
 
-public class PostDataToDB extends ConnTODb implements Serializable  {
+public class PostDataToDBHibernate extends HibernateConnTODb implements Serializable  {
     public static void main(String[] args) {
         try{
             User user=new User("Maia","Popkina",78996);

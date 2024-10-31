@@ -1,13 +1,13 @@
 package org.example.demo2;
 
-import ConnectionToDB.ConnTODb;
+import ConnectionToDB.HibernateConnTODb;
 import entity.User;
 
 import java.io.Serializable;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class QueryForDBMaxId extends ConnTODb implements Serializable {
+public class QueryForDBMaxIdHibernate extends HibernateConnTODb implements Serializable {
     public static void main(String[] args) {
         try {
             session.beginTransaction();
