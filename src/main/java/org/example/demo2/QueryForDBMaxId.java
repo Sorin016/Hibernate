@@ -13,7 +13,7 @@ public class QueryForDBMaxId extends ConnTODb implements Serializable {
             session.beginTransaction();
             List<User> userList=session.createQuery("from User").list();
             Stream<User> stream=userList.stream();
-            int s=stream.map(e->e.getId()).map(Integer::valueOf).max(Integer::compareTo).orElse(0);
+            int s= stream.map(e->e.getId()).max(Integer::compareTo).orElse(0);
             System.out.println(s);
             session.getTransaction().commit();
             System.out.println("DONEEEEE!!!!!!!!!!!!!!!!!!!!!!!");

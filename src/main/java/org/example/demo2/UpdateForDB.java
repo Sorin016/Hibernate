@@ -16,7 +16,7 @@ public class UpdateForDB extends ConnTODb implements Serializable {
 //            Query query = session.createNativeQuery("UPDATE hibernate.userhiber SET password = 23445 WHERE id=11");
 //            query.executeUpdate();
             //metoda2
-            session.createQuery("update User set password = 9999945 where id=11").executeUpdate();
+            session.createQuery("update User set password = 5 where id=10").executeUpdate();
 
             session.getTransaction().commit();
             System.out.println("DONEEEEE!!!!!!!!!!!!!!!!!!!!!!!");
