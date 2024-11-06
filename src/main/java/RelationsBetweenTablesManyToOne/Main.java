@@ -2,8 +2,6 @@ package RelationsBetweenTablesManyToOne;
 
 import ConnectionToDB.JPAConnToDB;
 import entity.CommentManyToOne;
-import entity.PasswordOneToOne;
-import entity.PersonOneToOne;
 import entity.PostManyToOne;
 
 import java.io.Serializable;

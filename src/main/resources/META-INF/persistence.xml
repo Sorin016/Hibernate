@@ -8,7 +8,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <class>entity.User</class>
-        <class>entity.PasswordOneToOne</class>
+        <class>entity.PassportOneToOne</class>
         <class>entity.PersonOneToOne</class>
         <class>entity.CommentManyToOne</class>
         <class>entity.PostManyToOne</class>

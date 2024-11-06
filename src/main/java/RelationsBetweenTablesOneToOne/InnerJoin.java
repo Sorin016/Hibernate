@@ -1,9 +1,6 @@
 package RelationsBetweenTablesOneToOne;
 
 import ConnectionToDB.JPAConnToDB;
-import entity.PasswordOneToOne;
-import entity.PersonOneToOne;
-import org.hibernate.query.Query;
 
 import jakarta.persistence.TypedQuery;
 
@@ -15,7 +12,7 @@ public class InnerJoin extends JPAConnToDB implements Serializable {
             entityManager.getTransaction().begin();
             TypedQuery<Object[]> createInnerJoin = entityManager
                     .createQuery("""
-                            select per,passport from PersonOneToOne per,PasswordOneToOne passport 
+                            select per,passport from PersonOneToOne per,PassportOneToOne passport 
                             where per.id=passport.id""", Object[].class);
 
             createInnerJoin.getResultList().forEach(e-> System.out.println(e[0]+" "+e[1]));

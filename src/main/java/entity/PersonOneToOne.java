@@ -5,6 +5,12 @@ import lombok.Data;
 
 @Entity
 @Data
+
+@NamedQueries(
+        @NamedQuery(name = "getAllDataFromPersonEntity",
+        query = """
+select p from PersonOneToOne p""")
+)
 public class PersonOneToOne {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,5 +19,5 @@ public class PersonOneToOne {
     private String nume;
 
     @OneToOne(cascade = CascadeType.PERSIST)
-    private PasswordOneToOne passwordOneToOne;
+    private PassportOneToOne passportOneToOne;
 }

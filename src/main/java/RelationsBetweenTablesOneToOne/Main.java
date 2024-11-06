@@ -1,7 +1,7 @@
 package RelationsBetweenTablesOneToOne;
 
 import ConnectionToDB.JPAConnToDB;
-import entity.PasswordOneToOne;
+import entity.PassportOneToOne;
 import entity.PersonOneToOne;
 
 import java.io.Serializable;
@@ -13,14 +13,14 @@ public class Main extends JPAConnToDB implements Serializable {
             PersonOneToOne personOneToOne = new PersonOneToOne();
             personOneToOne.setNume("sorea");
 
-            PasswordOneToOne passwordOneToOne = new PasswordOneToOne();
-            passwordOneToOne.setPasswordNumber("AC112321");
-            personOneToOne.setPasswordOneToOne(passwordOneToOne);
+            PassportOneToOne passportOneToOne = new PassportOneToOne();
+            passportOneToOne.setPasswordNumber("AC112321");
+            personOneToOne.setPassportOneToOne(passportOneToOne);
 
             entityManager.persist(personOneToOne);
             // se poate de facut asa sau de pus     @OneToOne(cascade = CascadeType.PERSIST) la
             //bucata de cod care ai nevoe pentru a face legatura
-           // entityManager.persist(passwordOneToOne);
+           // entityManager.persist(passportOneToOne);
 
             entityManager.getTransaction().commit();
         }
